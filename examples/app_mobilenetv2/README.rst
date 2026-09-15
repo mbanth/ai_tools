@@ -7,7 +7,7 @@ In order to compile and run this example follow these steps::
 
   python obtain_and_optimize_mobilenetv2.py
   xmake
-  xflash --target XCORE-AI-EXPLORER --data xcore_flash_binary.out
+  xflash --target XK-EVK-XU316 --data xcore_flash_binary.out
   xrun --xscope bin/app_mobilenetv2.xe
 
 In the example, we inference the model with a sample image of a LION. 

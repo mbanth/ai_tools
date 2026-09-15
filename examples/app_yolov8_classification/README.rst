@@ -29,7 +29,7 @@ application, flash the model data, and run the application::
   python obtain_and_optimize_yolov8_cls.py
   cmake -G "Unix Makefiles" -B build
   xmake -C build
-  xflash --target XCORE-AI-EXPLORER --data xcore_flash_binary.out
+  xflash --target XK-EVK-XU316 --data xcore_flash_binary.out
   xrun --xscope bin/app_yolov8_classification.xe
 
 Generated files

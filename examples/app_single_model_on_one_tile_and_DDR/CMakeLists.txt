@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.21)
 include($ENV{XMOS_CMAKE_PATH}/xcommon.cmake)
 project(app_single_model_on_one_tile_and_ddr)
 
+set(XMOS_SANDBOX_DIR ${CMAKE_CURRENT_LIST_DIR}/../../..)
+
 # hw and xscope
 set(APP_HW_TARGET src/XCORE-AI-EXPLORER-800.xn)
 set(APP_XSCOPE_SRCS src/config.xscope)
@@ -34,13 +36,9 @@ list(APPEND APP_COMPILER_FLAGS
   -fxscope
   -mcmodel=large
   -Wno-xcore-fptrgroup
-  -lquadflash 
   # -DTFLMC_XCORE_PROFILE
 )
 
 # dependencies and register
-set(APP_DEPENDENT_MODULES "")
+set(APP_DEPENDENT_MODULES "ai_tools")
 XMOS_REGISTER_APP()
-
-# Custom libs
-include(${CMAKE_CURRENT_LIST_DIR}/../aitools.cmake)

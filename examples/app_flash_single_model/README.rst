@@ -14,7 +14,7 @@ In order to compile and run this example follow these steps::
         model_files=["model.tflite"],
         param_files=["model.params"]
   )'
-  xflash --target XCORE-AI-EXPLORER --data xcore_flash_binary.out
+  xflash --target XK-EVK-XU316 --data xcore_flash_binary.out
   xrun --xscope bin/app_flash_single_model.xe
 
 When run, the program should print something similar to::
@@ -33,4 +33,4 @@ We can see this by looking at the size of the files::
 
 The python command makes the model.params file into a flash image.
 Finally, before running the program, the ``xflash`` command places the
-learned parameters into Flash memory on the XCORE-AI-EXPLORER board.
+learned parameters into Flash memory on the XK-EVK-XU316 board.

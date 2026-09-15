@@ -4,7 +4,7 @@ project(app_single_model_on_two_tiles)
 
 set(XMOS_SANDBOX_DIR ${CMAKE_CURRENT_LIST_DIR}/../../..)
 
-set(APP_HW_TARGET XCORE-AI-EXPLORER)
+set(APP_HW_TARGET XK-EVK-XU316)
 set(APP_XSCOPE_SRCS src/config.xscope)
 
 set(APP_INCLUDES src)
@@ -27,11 +27,8 @@ list(APPEND APP_COMPILER_FLAGS
   -Wno-xcore-fptrgroup
   -Wno-unknown-pragmas
   -Wno-bidirectional-buffered-port
-  -lquadflash
   -DTFLMC_XCORE_PROFILE
 )
 
-set(APP_DEPENDENT_MODULES "")
+set(APP_DEPENDENT_MODULES "ai_tools")
 XMOS_REGISTER_APP()
-
-include(${CMAKE_CURRENT_LIST_DIR}/../aitools.cmake)

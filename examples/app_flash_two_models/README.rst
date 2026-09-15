@@ -24,7 +24,7 @@ In order to compile and run this example follow these steps::
         model_files=["model1.tflite", "model2.tflite"],
         param_files=["model1.params", "model2.params"]
   )'
-  xflash --target XCORE-AI-EXPLORER --data xcore_flash_binary.out
+  xflash --target XK-EVK-XU316 --data xcore_flash_binary.out
   xrun --xscope bin/app_flash_two_models.xe
 
 This should print::

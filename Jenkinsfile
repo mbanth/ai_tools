@@ -112,6 +112,7 @@ def runTests(String platform, Closure body) {
   createVenv('requirements.txt')
   withVenv {
     sh 'pip install -r requirements.txt'
+    sh 'pip install -r integration_tests/requirements.txt'
     dir('python') {
       if (platform == 'linux' | platform == 'device') {
         unstash 'linux_wheel'

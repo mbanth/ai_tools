@@ -38,9 +38,9 @@ If the ``xAISRV`` device reports that its driver is not installed,
 use Zadig to install WinUSB for ``xAISRV``.
 Take care to select ``xAISRV`` and not the xTAG debug adapter.
 
-Then run::
+Then install the shared example requirements from this directory::
 
-  python -m pip install "numpy<2.0" "opencv-python<4.12"
+  python -m pip install -r ../requirements.txt
 
 Regardless of the OS, run::
 
